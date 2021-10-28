@@ -47,7 +47,7 @@ const proxyFromFile = async (file) => {
         return proxyList;
     }
     catch (error) {
-        throw error.message;
+        throw new Error(error.message);
     }
 };
 const sessionFromFile = async (file) => {
@@ -60,7 +60,7 @@ const sessionFromFile = async (file) => {
         return proxyList;
     }
     catch (error) {
-        throw error.message;
+        throw new Error(error.message);
     }
 };
 const promiseScraper = async (input, type, options = {}) => {
